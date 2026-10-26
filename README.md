@@ -14,3 +14,12 @@ In progress. See DECISION_LOG.md for what I built and why.
 
 ## Built so far
 - Region, budget alert, VPC, subnets, route tables, web security group
+- EC2 web server in a public subnet, reachable on HTTP (port 80)
+- IAM role with the SSM policy, so I log in with Session Manager (no open SSH port needed)
+- Apache web server running a simple barbershop page, set to start on every reboot
+
+## Next
+- Remove the SSH rule now that Session Manager works
+- Add a load balancer and auto scaling
+- Add a database in the private subnets
+- Add HTTPS, monitoring, and an IAM user with MFA for daily work
